@@ -2,6 +2,10 @@ import React, {Component} from 'react'
 import './stylesheets/LandingPage.css'
 import LanguageList from './LanguageList.js'
 import Typist from 'react-typist'
+import About from './About.js'
+import Resume from './Resume.js'
+import ProjectList from './ProjectList.js'
+import ContactInformation from './ContactInformation.js'
 
 class LandingPage extends Component {
 
@@ -12,7 +16,7 @@ class LandingPage extends Component {
   
   state = {
     text: "Javascript",
-    showLanguages: false
+    showing: "none"
   }
 
   grabLanguage = () => {
@@ -26,7 +30,7 @@ class LandingPage extends Component {
       return(
         <div className="LandingPage-header">
           <img src=""/>
-          <Typist cursor={{hideWhenDone: true}} onTypingDone={() => {this.navRef.current.id = "nav"}}>Hi, I'm Alex Szeto. 
+          <Typist id="bottom" cursor={{hideWhenDone: true}} onTypingDone={() => {this.navRef.current.id = "nav"}}>Hi, I'm Alex Szeto. 
             <br/>
             <Typist.Delay ms={500}/>
             A Full-Stack Developer.
@@ -35,14 +39,20 @@ class LandingPage extends Component {
             I Develop With: Javascript, Ruby & Python.
           </Typist>
           <br/>
+
           <div id="nonav" ref={this.navRef}>
-            <span>About</span>{" | "}
-            <span onMouseEnter={() => { this.setState({showLanguages: true}) }}>Skills</span>{" | "}
-            <span>Projects</span>{" | "}
-            <span>Resume</span>{" | "}
-            <span>Contact Me</span>
+            <span onMouseEnter={() => { this.setState({showing: "about"}) }}>About</span>{" | "}
+            <span onMouseEnter={() => { this.setState({showing: "skills"}) }}>Skills</span>{" | "}
+            <span onMouseEnter={() => { this.setState({showing: "projects"}) }}>Projects</span>{" | "}
+            <span onMouseEnter={() => { this.setState({showing: "resume"}) }}>Resume</span>{" | "}
+            <span onMouseEnter={() => { this.setState({showing: "contact"}) }}>Contact Me</span>
           </div>
-          <LanguageList show={this.state.showLanguages}/>
+
+          {this.state.showing == "about" && false && <About/>}
+          {this.state.showing == "skills" && <LanguageList/>}
+          {this.state.showing == "projects" && false && <ProjectList/>}
+          {this.state.showing == "resume" && false && <Resume/>}
+          {this.state.showing == "contact" && false && <ContactInformation/>}
         </div>
       )
     }

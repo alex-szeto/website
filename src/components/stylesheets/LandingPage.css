@@ -14,6 +14,10 @@
   border-bottom: 3px solid black;
 }
 
+#bottom{
+  border-bottom:3px solid white;
+}
+
 #nonav{
   display: none;
 }
