@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+.LandingPage-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-bottom: 3px solid black;
+}
+
+#nav > span{
+  font-size: calc(6px + 2vmin);
+  color: gray;
+}
+
+#nav > span:hover {
+  border-bottom: 3px solid black;
+  font-weight: bold;
+  animation: selected;
+  animation-duration: 0.2s;
+}
+
+.hoverElement{
+  font-size: calc(1px + 2vmin);
+  color: beige;
+  animation: fade;
+  animation-duration: 0.5s;
+}
+
+.underline{
+  border-bottom: 1px solid rgb(197, 191, 179);
+  color: rgb(197, 191, 179);
+}
+
+@keyframes fade{
+  from{opacity: 0;
+  }
+  to{opacity: 1;
+  }
+}
+
+@keyframes selected{
+  from {font-weight: normal;
+  }
+  to {font-weight: bold;}
+}
+
+
+.one{
+  animation: fade;
+  animation-duration: 0.6s;
+}
+
+.two{
+  animation: fade;
+  animation-duration: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.three{
+  animation: fade;
+  animation-duration: 0.6s;
+  animation-delay: 1.2s;
+}
+
+.four{
+  animation: fade;
+  animation-duration: 0.6s;
+  animation-delay: 1.8s;
+}
+
+.one:hover {
+  transition: 1s;
+    left: 0;
+}
