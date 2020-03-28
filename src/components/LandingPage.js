@@ -36,7 +36,7 @@ class LandingPage extends Component {
             A Full-Stack Developer.
             <Typist.Delay ms={500}/>
             <br/>
-            I Develop With: Javascript, Ruby & Python.
+            I Develop With: JavaScript, Ruby & Python.
           </Typist>
           <br/>
 
