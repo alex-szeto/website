@@ -6,6 +6,7 @@ class LanguageList extends Component {
         return(
             <div style={{height: 12}}><br/>{this.props.show &&
                 <Fragment>
+                    <div>Hover over any skill to see project examples:</div>
                     <div className="hoverElement"><strong class="underline">Languages:</strong> Javascript, Ruby, Python</div>
                     <div className="hoverElement"><strong class="underline">Frameworks Libraries:</strong> React/Redux, Node, Express, jQuery, Mocha, Chai, Jest, Bootstrap, Mongoose</div>
                     <div className="hoverElement"><strong class="underline">Databases Middleware:</strong> MongoDB, PostgreSQL, Rest, GraphQL</div>

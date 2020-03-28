@@ -1,8 +1,14 @@
 import React, {Component} from 'react'
 import './stylesheets/LandingPage.css'
 import LanguageList from './LanguageList.js'
+import Typist from 'react-typist'
 
 class LandingPage extends Component {
+
+  constructor(){
+    super()
+    this.navRef = React.createRef();
+  }
   
   state = {
     text: "Javascript",
@@ -13,26 +19,25 @@ class LandingPage extends Component {
     const languages = ["HTML","CSS","React","AWS","JQuery","MongoDB","Express.js","React.js","Node.js","Ruby","Python","Rails"]
     const chosen = languages[Math.floor(Math.random() * languages.length)]
 
-    while(this.state.text.length != 0){
-        this.setState(prevState =>{ 
-          console.log(this.state)
-          return{text: prevState.text.slice(0, prevState.text.length - 1)}
-         })
-      
-    }
+    this.setState({text: chosen})
    }
 
     render(){
       return(
         <div className="LandingPage-header">
           <img src=""/>
-          <div>Hi, I'm Alex Szeto. A Full-Stack Developer.</div>
+          <Typist cursor={{hideWhenDone: true}} onTypingDone={() => {this.navRef.current.id = "nav"}}>Hi, I'm Alex Szeto. 
+            <br/>
+            <Typist.Delay ms={500}/>
+            A Full-Stack Developer.
+            <Typist.Delay ms={500}/>
+            <br/>
+            I Develop With: Javascript, Ruby & Python.
+          </Typist>
           <br/>
-          <div>I Develop With: <strong><span id="output">{this.state.text}</span></strong></div>
-          <br/>
-          <div id="nav">
+          <div id="nonav" ref={this.navRef}>
             <span>About</span>{" | "}
-            <span onMouseEnter={() => { this.setState({showLanguages: true}) }}>Languages</span>{" | "}
+            <span onMouseEnter={() => { this.setState({showLanguages: true}) }}>Skills</span>{" | "}
             <span>Projects</span>{" | "}
             <span>Resume</span>{" | "}
             <span>Contact Me</span>

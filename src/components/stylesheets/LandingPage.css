@@ -14,6 +14,15 @@
   border-bottom: 3px solid black;
 }
 
+#nonav{
+  display: none;
+}
+
+#nav{
+  animation: intro;
+  animation-duration: 2s;
+}
+
 #nav > span{
   font-size: calc(6px + 2vmin);
   color: gray;
@@ -43,6 +52,12 @@
   }
   to{opacity: 1;
   }
+}
+
+@keyframes intro{
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100%{opacity: 1;}
 }
 
 @keyframes selected{
