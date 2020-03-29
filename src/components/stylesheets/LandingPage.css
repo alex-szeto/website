@@ -47,6 +47,26 @@
   padding-left: 7px;
   padding-top: 5px;
   padding-bottom: 8px;
+  background-color: rgba(148, 155, 167, 0.315);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.icons {
+  border: 2px solid rgb(136, 136, 136);
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  background-color: rgb(62, 67, 75);
+  display: inline-block;
+  width: 107px;
+}
+
+.contact {
+  border: 2px solid rgb(136, 136, 136);
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  font-size: calc(5px + 2vmin);
   background-color: rgb(62, 67, 75);
 }
 
@@ -143,10 +163,12 @@
 .project{
   animation: projectAnim;
   animation-duration: 2s;
-  border: 1px solid rgb(216, 230, 250, 0.979);
+  border: 3px solid rgb(216, 230, 250, 0.979);
   font-size: calc(1px + 2vmin);
   background-color: rgb(54, 56, 63);
-  color: #5c5c5f;
+  color: #fefeff;
+  padding-left: 10px;
+  padding: 5px;
 }
 
 @keyframes projectAnim{

@@ -38,9 +38,9 @@ class InformationPage extends Component{
                 return <div className="project">GraphQL</div>
             case "AWS":
                 return <div className="project">
-                        Amazon Web Services
-                        <div>Description:</div>
-                        <div>Project:</div>
+                        <div><strong>Amazon Web Services</strong></div>
+                        <div> Used To Host Web Content</div><br/>
+                        <div>Project: This Website</div>
                     </div>
             case "Git":
                 return <div className="project">Git</div>

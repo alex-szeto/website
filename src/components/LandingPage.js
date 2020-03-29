@@ -37,7 +37,7 @@ class LandingPage extends Component {
               <span onClick={() => { this.handleShowing("none") }} style={{color: "white"}}> Alex Szeto</span> {" | "}
               <span onClick={() => { this.handleShowing("about") }}> {this.state.showing === "about" ? <strong className="selected">About</strong> : <span>About</span>} </span>{" | "}
               <span onClick={() => { this.handleShowing("skills") }}>{this.state.showing === "skills" ? <strong className="selected">Skills</strong> : <span>Skills</span>}</span>{" | "}
-              <span onClick={() => { this.handleShowing("projects") }}>{this.state.showing === "project" ? <strong className="selected">Projects</strong> : <span>Projects</span>}</span>{" | "}
+              <span onClick={() => { this.handleShowing("projects") }}>{this.state.showing === "projects" ? <strong className="selected">Projects</strong> : <span>Projects</span>}</span>{" | "}
               <span onClick={() => { this.handleShowing("resume") }}>{this.state.showing === "resume" ? <strong className="selected">Resume</strong> : <span>Resume</span>}</span>{" | "}
               <span onClick={() => { this.handleShowing("contact") }}>{this.state.showing === "contact" ? <strong className="selected">Contact Me</strong> : <span>Contact Me</span>}</span>
             </div>
