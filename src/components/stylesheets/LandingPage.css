@@ -3,7 +3,7 @@
 }
 
 .LandingPage-header {
-  background-color: #282c34;
+  background-color: #1b1c1f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,46 @@
   font-size: calc(10px + 2vmin);
   color: white;
   border-bottom: 3px solid black;
+}
+
+.initialDiv > span:hover{
+  border-bottom: 3px solid black;
+  font-weight: bold;
+  animation: selected;
+  animation-duration: 0.2s;
+  cursor: pointer;
+}
+
+.initialDiv{
+  animation: fade;
+  animation-duration: 1s;
+}
+
+.initialDiv > span {
+  font-size: calc(6px + 2vmin);
+  color: gray;
+}
+
+.showing {
+  background-color: #1b1c1f;
+  padding-left: 25px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.skills {
+  border: 1px solid grey;
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  background-color: blue(247, 228, 228);
+}
+
+.hoverElement > span {
+  cursor: pointer;
 }
 
 #bottom{
@@ -23,32 +63,58 @@
 }
 
 #nav{
-  animation: intro;
+  background-color: #282c34;
+  border-bottom: 0px solid black;
+  font-size: calc(20px + 2vmin);
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+#nav > span {
+  animation: loadnav;
   animation-duration: 2s;
-}
-
-#nav > span{
   font-size: calc(6px + 2vmin);
-  color: gray;
+  color: rgb(224, 222, 222);
 }
 
-#nav > span:hover {
+#nav > span:hover{
+  cursor: pointer;
+}
+
+@keyframes loadnav{
+  from{opacity: 0;
+  }
+  to{opacity: 1;}
+}
+
+
+
+.selected {
   border-bottom: 3px solid black;
   font-weight: bold;
   animation: selected;
   animation-duration: 0.2s;
+  color: white;
 }
 
 .hoverElement{
   font-size: calc(1px + 2vmin);
-  color: beige;
+  color: rgb(224, 224, 213);
   animation: fade;
   animation-duration: 0.5s;
 }
 
+.hoverElement > span:hover {
+  font-weight: bold;
+}
+
+.skillsCategory{
+  border-bottom: 1px solid rgb(216, 230, 250, 0.979);
+  color: white;
+}
+
 .underline{
-  border-bottom: 1px solid rgb(197, 191, 179);
-  color: rgb(197, 191, 179);
+  color: rgb(13, 182, 103);
 }
 
 @keyframes fade{
@@ -70,31 +136,23 @@
   to {font-weight: bold;}
 }
 
-
-.one{
-  animation: fade;
-  animation-duration: 0.6s;
+@keyframes nav{
+  from{transform: translateY(100);}
+  to{transform: translateY(0);}
 }
 
-.two{
-  animation: fade;
-  animation-duration: 0.6s;
-  animation-delay: 0.6s;
+.project{
+  animation: projectAnim;
+  animation-duration: 2s;
+  border: 1px solid rgb(216, 230, 250, 0.979);
+  font-size: calc(1px + 2vmin);
+  background-color: rgb(54, 56, 63);
+  color: #5c5c5f;
 }
 
-.three{
-  animation: fade;
-  animation-duration: 0.6s;
-  animation-delay: 1.2s;
-}
-
-.four{
-  animation: fade;
-  animation-duration: 0.6s;
-  animation-delay: 1.8s;
-}
-
-.one:hover {
-  transition: 1s;
-    left: 0;
+@keyframes projectAnim{
+  from{opacity: 0;
+  }
+  to{opacity: 1;
+  }
 }
