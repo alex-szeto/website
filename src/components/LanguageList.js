@@ -12,7 +12,7 @@ class LanguageList extends Component {
 
     render(){
         return(
-            <div style={{height: 12, paddingTop:10}} className="showing"><br/>
+            <div style={{height: 12, paddingTop:10}} className="showing">Skills:
                     <div className="skills">
                         <div className="hoverElement"><strong className="skillsCategory">Languages: </strong> 
                             <span onClick={this.handleShowing}>{this.state.showing === "JavaScript" ? <strong className="underline"> JavaScript </strong> : "JavaScript"},</span>
@@ -44,6 +44,7 @@ class LanguageList extends Component {
                             <span onClick={this.handleShowing}> {this.state.showing === "Visual Studio" ? <strong className="underline"> Visual Studio </strong> : "Visual Studio"}</span>
                         </div>
                     </div>
+                    <br/>
                     {<InformationPage showing={this.state.showing}/>}
             </div>
         )

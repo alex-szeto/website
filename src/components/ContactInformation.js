@@ -5,7 +5,7 @@ class ContactInformation extends Component {
 
     render(){
         return(
-            <div style={{height: 12}}><br/>
+            <div style={{height: 12}} className="showing"><br/>
 
                 <div><strong>Contact Information</strong></div><br/>
                     <div>Email - Alex.Szeto.a@gmail.com </div>

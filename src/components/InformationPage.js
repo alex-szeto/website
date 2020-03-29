@@ -53,7 +53,7 @@ class InformationPage extends Component{
 
     render(){
         return(
-            <div><br/>{this.handleShowing(this.props.showing)}</div>
+            <div>{this.handleShowing(this.props.showing)}</div>
         )
     }
 

@@ -43,11 +43,11 @@
 }
 
 .skills {
-  border: 1px solid grey;
+  border: 3px solid rgb(136, 136, 136);
   padding-left: 7px;
   padding-top: 5px;
   padding-bottom: 8px;
-  background-color: blue(247, 228, 228);
+  background-color: rgb(62, 67, 75);
 }
 
 .hoverElement > span {
@@ -64,7 +64,7 @@
 
 #nav{
   background-color: #282c34;
-  border-bottom: 0px solid black;
+  border-bottom: 1px solid white;
   font-size: calc(20px + 2vmin);
   padding-bottom: 10px;
   padding-left: 15px;
@@ -79,6 +79,7 @@
 
 #nav > span:hover{
   cursor: pointer;
+  font-weight: bold;
 }
 
 @keyframes loadnav{
@@ -86,8 +87,6 @@
   }
   to{opacity: 1;}
 }
-
-
 
 .selected {
   border-bottom: 3px solid black;

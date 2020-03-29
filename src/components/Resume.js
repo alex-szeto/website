@@ -4,7 +4,7 @@ class LanguageList extends Component {
 
     render(){
         return(
-            <div style={{height: 12}}><br/>
+            <div style={{height: 12}} className="showing"><br/>
                 Resume Placeholder
             </div>
         )

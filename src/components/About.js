@@ -4,8 +4,8 @@ class About extends Component {
 
     render(){
         return(
-            <div style={{height: 12}}><br/>
-                    Placeholder: About
+            <div style={{height: 12}} className="showing"><br/>
+                About Placeholder
             </div>
         )
     }

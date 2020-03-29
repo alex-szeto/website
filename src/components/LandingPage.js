@@ -37,12 +37,12 @@ class LandingPage extends Component {
               <span onClick={() => { this.handleShowing("none") }} style={{color: "white"}}> Alex Szeto</span> {" | "}
               <span onClick={() => { this.handleShowing("about") }}> {this.state.showing === "about" ? <strong className="selected">About</strong> : <span>About</span>} </span>{" | "}
               <span onClick={() => { this.handleShowing("skills") }}>{this.state.showing === "skills" ? <strong className="selected">Skills</strong> : <span>Skills</span>}</span>{" | "}
-              <span onClick={() => { this.handleShowing("project") }}>{this.state.showing === "project" ? <strong className="selected">Projects</strong> : <span>Projects</span>}</span>{" | "}
+              <span onClick={() => { this.handleShowing("projects") }}>{this.state.showing === "project" ? <strong className="selected">Projects</strong> : <span>Projects</span>}</span>{" | "}
               <span onClick={() => { this.handleShowing("resume") }}>{this.state.showing === "resume" ? <strong className="selected">Resume</strong> : <span>Resume</span>}</span>{" | "}
               <span onClick={() => { this.handleShowing("contact") }}>{this.state.showing === "contact" ? <strong className="selected">Contact Me</strong> : <span>Contact Me</span>}</span>
             </div>
           <div>
-            {this.state.showing === "none" && <div className="LandingPage-header"><Typist id="bottom" cursor={{hideWhenDone: true}} onTypingDone={() => {}}> <Typist.Delay ms={250}/>
+            {this.state.showing === "none" && <div className="LandingPage-header"><Typist id="bottom" cursor={{hideWhenDone: true}} > <Typist.Delay ms={250}/>
               Hi, I'm Alex Szeto. 
               <br/>
               <Typist.Delay ms={250}/>
@@ -53,20 +53,20 @@ class LandingPage extends Component {
               </Typist>
               <br/>
               <div className="initialDiv" ref={this.initalDivRef}>
-                <span>About</span>{' | '}
+                <span onClick={() => { this.handleTransition("about") }}>About</span>{' | '}
                 <span onClick={() => { this.handleTransition("skills") }}>Skills</span>{' | '}
-                <span>Project</span>{' | '}
-                <span>Resume</span>{' | '}
-                <span>Contact</span>
+                <span onClick={() => { this.handleTransition("projects") }}>Project</span>{' | '}
+                <span onClick={() => { this.handleTransition("resume") }}>Resume</span>{' | '}
+                <span onClick={() => { this.handleTransition("contact") }}>Contact</span>
               </div>
             </div>
             }
 
 
-            {this.state.showing === "about" && false && <About/>}
+            {this.state.showing === "about" && <About/>}
             {this.state.showing === "skills" && <LanguageList/>}
-            {this.state.showing === "projects" && false && <ProjectList/>}
-            {this.state.showing === "resume" && false && <Resume/>}
+            {this.state.showing === "projects" &&  <ProjectList/>}
+            {this.state.showing === "resume" &&  <Resume/>}
             {this.state.showing === "contact" && <ContactInformation/>}
           </div>
         </div>
